@@ -1,5 +1,5 @@
+import 'package:advise_me/controller/NavBar.dart';
 import 'package:advise_me/components/constants.dart';
-import 'package:advise_me/pages/Home.dart';
 import 'package:advise_me/pages/Login.dart';
 import 'package:flutter/material.dart';
 
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: kPrimaryColor,
       ),
-      home: const HomePage(),
+      home: MyNavBar(),
     );
   }
 }
