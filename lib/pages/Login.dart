@@ -36,7 +36,7 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
     Size size = MediaQuery.of(context).size;
 
     double viewInset = MediaQuery.of(context).viewInsets.bottom; // we are using this to determine Keyboard is opened or not
-    double defaultLoginSize = size.height - (size.height * 0.35);
+    double defaultLoginSize = size.height - (size.height * 0.30);
     double defaultRegisterSize = size.height - (size.height * 0.15);
 
     containerSize = Tween<double>(begin: size.height * 0.07, end: defaultRegisterSize).animate(CurvedAnimation(parent: animationController!, curve: Curves.linear));
