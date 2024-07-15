@@ -18,6 +18,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primaryColor: kPrimaryColor,
+        appBarTheme: const AppBarTheme(
+          backgroundColor: kPrimaryColor,
+        ),
       ),
       home: MyNavBar(),
     );

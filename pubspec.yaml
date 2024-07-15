@@ -37,6 +37,7 @@ dependencies:
   google_fonts: ^4.0.1
   google_nav_bar: ^5.0.6
   get: ^4.6.6
+  custom_clippers: ^2.0.0
 
 dev_dependencies:
   flutter_test:
@@ -58,6 +59,18 @@ flutter:
     - assets/images/logo.png
     - assets/images/Logo.gif
     - assets/images/RegisterLogo.gif
+    - assets/images/background.jpeg
+    - assets/images/humen1.png
+    - assets/images/humen2.png
+    - assets/images/humen3.png
+    - assets/images/humen4.png
+    - assets/images/humen5.png
+    - assets/images/humen6.png
+    - assets/images/humen7.png
+    - assets/images/humen8.png
+    - assets/images/humen9.png
+    - assets/images/humen10.png
+    - assets/images/humen11.png
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
