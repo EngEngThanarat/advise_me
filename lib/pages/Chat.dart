@@ -28,18 +28,88 @@ class _ChatPageState extends State<ChatPage> {
                         color: Colors.white),
                   ),
                 ),
-                actions: const [
-                  Padding(
+                actions: [
+                  const Padding(
                     padding: EdgeInsets.only(top: 12, right: 15),
-                    child: Icon(
+                  ),
+                  IconButton(
+                    onPressed: () {
+                      showSearch(
+                          context: context, delegate: CustonSearchDelegate());
+                    },
+                    icon: const Icon(
                       Icons.search,
-                      size: 28,
                       color: Colors.white,
+                      size: 30,
                     ),
-                  )
+                  ),
                 ],
               ),
             ),
             body: ChatWidget()));
+  }
+}
+
+class CustonSearchDelegate extends SearchDelegate {
+  List<String> searchTerms = ['Flutter', 'Dart', 'Java', 'Python', 'Kotlin'];
+
+  @override
+  List<Widget> buildActions(BuildContext context) {
+    return [
+      IconButton(
+        onPressed: () {
+          query = '';
+        },
+        icon: const Icon(Icons.clear),
+      )
+    ];
+  }
+
+  @override
+  Widget buildLeading(BuildContext context) {
+    return IconButton(
+      onPressed: () {
+        close(context, '');
+      },
+      icon: const Icon(Icons.arrow_back),
+    );
+  }
+
+  @override
+  Widget buildResults(BuildContext context) {
+    List<String> matchQuery = [];
+    for (var name in searchTerms) {
+      if (name.toLowerCase().contains(query.toLowerCase())) {
+        matchQuery.add(name);
+      }
+    }
+    return ListView.builder(
+      itemCount: matchQuery.length,
+      itemBuilder: (context, index) {
+        var result = matchQuery[index];
+        return ListTile(
+          title: Text(result),
+        );
+      },
+    );
+  }
+
+  @override
+  Widget buildSuggestions(BuildContext context) {
+    List<String> matchQuery = [];
+    for (var name in searchTerms) {
+      if (name.toLowerCase().contains(query.toLowerCase())) {
+        matchQuery.add(name);
+      }
+    }
+    return ListView.builder(
+      itemCount: matchQuery.length,
+      itemBuilder: (context, index) {
+        var result = matchQuery[index];
+        return ListTile(
+          title: Text(result),
+        );
+      },
+    );
   }
 }

@@ -8,16 +8,16 @@ class chatSample extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding: EdgeInsets.only(right: 80),
+          padding: const EdgeInsets.only(right: 80),
           child: ClipPath(
             clipper: UpperNipMessageClipperTwo(MessageType.receive),
             child: Container(
-              padding:
-                  EdgeInsets.only(top: 10, left: 25, right: 10, bottom: 10),
-              decoration: BoxDecoration(
+              padding: const EdgeInsets.only(
+                  top: 10, left: 25, right: 10, bottom: 10),
+              decoration: const BoxDecoration(
                 color: Colors.white,
               ),
-              child: Text(
+              child: const Text(
                 "Hello, How are you?",
                 style: TextStyle(fontSize: 17),
               ),
@@ -26,16 +26,16 @@ class chatSample extends StatelessWidget {
         ),
         Container(
           alignment: Alignment.centerRight,
-          margin: EdgeInsets.only(top: 20, left: 80, bottom: 15),
+          margin: const EdgeInsets.only(top: 20, left: 80, bottom: 15),
           child: ClipPath(
             clipper: UpperNipMessageClipperTwo(MessageType.send),
             child: Container(
-              padding:
-                  EdgeInsets.only(top: 10, left: 10, bottom: 10, right: 20),
+              padding: const EdgeInsets.only(
+                  top: 10, left: 10, bottom: 10, right: 20),
               decoration: BoxDecoration(
                 color: Colors.blue[200],
               ),
-              child: Text(
+              child: const Text(
                 "Hi, Student, i am fine and well. thanks for asking and what about you? i hope you are also fine and well.",
                 style: TextStyle(fontSize: 17),
               ),
